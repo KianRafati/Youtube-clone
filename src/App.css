@@ -1,15 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
 body {
+    margin: 0;
     background-color: #022022;
     font-family: fantasy;
     font-size: 24px;
+}
+
+:root {
+    --navBarHeight: 5vh;
+    --navBarColumnWidth: 5vw;
+    --websiteMainFont: 'Oswald', sans-serif;
 }
 
 .navBar {
     background-color: #333;
     color: aliceblue;
     padding: 10px;
-    text-align: center;
     position: sticky;
     top: 0;
+    height: var(--navBarHeight);
     z-index: 100;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--navBarColumnWidth));
+    grid-auto-rows: var(--navBarHeight);
+    gap: 2vw;
+}
+
+.navBar img {
+    width: 100%;
+    border-radius: 10px;
+    grid-column: 2;
+
+    max-width: 5vh;
+}
+
+.navBar button {
+    width: 100%;
+    font-size: 75%;
+    font-family: var(--websiteMainFont);
+    grid-column: 3/span 3;
+
+    border-radius: 10px;
+    background-color: #333;
+    color: aliceblue;
+    border: transparent;
+}
+
+.navBar button:hover {
+    border: #4f4f4f solid;
+}
+
+#searchBar {
+    border-radius: 10px;
+    grid-column: 6 / span 5;
 }

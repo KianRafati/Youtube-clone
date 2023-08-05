@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactDOM } from "react";
 import { useEffect } from "react";
+import MenuButtonComponent from './MenuButtonComponent.jsx';
 
 import './App.css';
 
@@ -16,13 +17,17 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('Spiderman')
+        searchMovies('Oppenheimer')
     }, [])
 
-    return(
+    return (
         <div className="app">
             <nav className="navBar">
-                
+                <img src="./favicon.ico" />
+                <MenuButtonComponent />
+                <input typeof="text" id="searchBar">
+
+                </input>
             </nav>
         </div>
     )
