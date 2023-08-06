@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactDOM } from "react";
 import { useEffect } from "react";
-import MenuButtonComponent from './MenuButtonComponent.jsx';
+import NavBarComponent from "./navBar.jsx";
 
 import './App.css';
 
@@ -22,13 +22,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <nav className="navBar">
-                <img src="./favicon.ico" />
-                <MenuButtonComponent />
-                <input typeof="text" id="searchBar">
-
-                </input>
-            </nav>
+            <NavBarComponent />
         </div>
     )
 }

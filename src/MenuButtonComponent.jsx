@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as MenuIcon } from './burger-menu.svg';
+import { ReactComponent as MenuIcon } from './assets/burger-menu.svg';
 
 function MenuButtonComponent() {
   const [buttonText, setButtonText] = useState('Menu');
 
   useEffect(() => {
     function updateButtonText() {
-      if (window.innerWidth <= 700) {
+      if (window.innerWidth <= 800) {
         setButtonText('');
       } else {
-        setButtonText('Menu');
+        setButtonText(' Menu');
       }
     }
 

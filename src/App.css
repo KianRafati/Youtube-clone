@@ -26,6 +26,8 @@ body {
     grid-template-columns: repeat(auto-fill, var(--navBarColumnWidth));
     grid-auto-rows: var(--navBarHeight);
     gap: 2vw;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
 }
 
 .navBar img {
@@ -43,7 +45,7 @@ body {
     grid-column: 3/span 3;
 
     border-radius: 10px;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, .1) ;
     color: aliceblue;
     border: transparent;
 }
@@ -55,4 +57,10 @@ body {
 #searchBar {
     border-radius: 10px;
     grid-column: 6 / span 5;
+}
+
+#searchBarBtn{
+    grid-column: 11 ;
+    width: 100px;
+    height: auto;
 }
