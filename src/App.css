@@ -28,6 +28,7 @@ body {
     gap: 2vw;
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(10px);
+    border-bottom: #baba solid 0.5px;
 }
 
 .navBar img {
@@ -55,7 +56,6 @@ body {
 }
 
 #searchBar {
-    border-radius: 10px;
     grid-column: 6 / span 5;
 }
 
