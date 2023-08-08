@@ -27,7 +27,7 @@ function MenuButtonComponent() {
   };
 
   return (
-    <button>
+    <button id='MenuBtn'>
       <MenuIcon style={iconStyles} />
       {buttonText}
     </button>

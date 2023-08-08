@@ -12,8 +12,6 @@ const SearchBarComponent = () => {
     }
  
     const inputStyle = {
-        display: 'grid',
-        gridAutoRows: '5vh',
         gridColumn: '1/span 5',
         borderTopLeftRadius: '10px',
         borderBottomLeftRadius: '10px',

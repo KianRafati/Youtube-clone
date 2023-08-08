@@ -1,15 +1,19 @@
 import React from "react";
-import MenuButtonComponent from './MenuButtonComponent.jsx';
+import MenuButtonComponent from './MenuButton.jsx';
 import SearchBarComponent from "./SearchBar.jsx";
+import CineProComponent from "./CinePro.jsx";
+import WatchListComponent from "./WatchList.jsx";
 
 const NavBarComponent = () => {
-    let SvgPath = 'Search'
+    
 
     return (
         <nav className="navBar">
             <img src="./favicon.ico" />
             <MenuButtonComponent />
             <SearchBarComponent />
+            <CineProComponent />
+            <WatchListComponent />
         </nav>
     )
 }
