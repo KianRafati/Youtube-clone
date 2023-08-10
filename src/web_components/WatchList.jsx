@@ -1,5 +1,7 @@
 import React from "react";
-import { ReactComponent as Watchlist } from './assets/watchlist.svg'
+import { ReactComponent as Watchlist } from '../assets/watchlist.svg'
+import { styled } from "styled-components";
+import { websiteMainFont } from "../constants";
 
 const WatchListComponent = () => {
 
@@ -26,13 +28,31 @@ const WatchListComponent = () => {
         gridColumn: '2',
     }
 
+    const WatchlistBtn = styled.button`
+        width: 100%;
+        font-size: 70%;
+        grid-column: 13/span 2;
+        font-family: ${websiteMainFont};
+
+        border-radius: 10px;
+        background-color: transparent ;
+        color: aliceblue;
+        border: transparent;
+
+        &:hover {
+            background-color: #4f4f4f;
+            color: white;
+            border: 1px solid white;
+        }
+    `
+
     return (
-        <button id="WatchlistBtn" style={WatchlistStyle}>
+        <WatchlistBtn id="WatchlistBtn" style={WatchlistStyle}>
             <Watchlist style={WatchlistIconStyle} />
             <label style={WatchlistLblStyle}>
                 Watchlist
             </label>
-        </button>
+        </WatchlistBtn>
     )
 }
 
