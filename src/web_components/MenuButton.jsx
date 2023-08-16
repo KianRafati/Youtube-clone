@@ -33,7 +33,7 @@ const MenuButtonComponent = ({ height , index }) => {
   const MenuButton = styled.button`
       width: 100%;
       height: ${height};
-      font-size: 75%;
+      font-size: 18px;
       font-family: ${websiteMainFont};
       grid-column: ${index}/span 2;
 

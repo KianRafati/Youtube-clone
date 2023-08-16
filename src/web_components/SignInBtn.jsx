@@ -7,7 +7,7 @@ const SignInComponent = ({height , index}) => {
     const SignInButton = styled.button`
         width: 100%;
         height: ${height};
-        font-size: 70%;
+        font-size: 18px;
         grid-column: ${index}/span 2;
         font-family: ${websiteMainFont};
 

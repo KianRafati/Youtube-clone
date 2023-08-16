@@ -35,6 +35,12 @@ const NavBarImg = styled.img`
     max-width: ${NavBarHeight};
 `;
 
+const NavBarImg2 = styled.img`
+    width: 100%;
+    border-radius: 10px;
+    grid-column: 3;
+    max-width: ${NavBarHeight};
+`;
 
 const NavBarComponent = ({ height }) => {
 
@@ -72,8 +78,8 @@ const NavBarComponent = ({ height }) => {
     } else {
         return (
             <NavBar>
-                <NavBarImg src="./favicon.ico" />
-                <MenuButtonComponent height={height} index={3} />
+                <MenuButtonComponent height={height} index={1} />
+                <NavBarImg2 src="./favicon.ico" />
                 <SearchBarComponent height={height} index={5} />
                 <SignInComponent height={height} index={10} />
                 <UseAppComponent height={height} index={12} />
