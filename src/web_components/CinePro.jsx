@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { websiteMainFont } from "../constants";
 
-const CineProComponent = ({height}) => {
+const CineProComponent = ({height ,index}) => {
 
     const CineProStyle = {
         color: 'aqua',
@@ -13,7 +13,7 @@ const CineProComponent = ({height}) => {
         width: 100%;
         height: ${height};
         font-size: 70%;
-        grid-column: 10/span 2;
+        grid-column: ${index}/span 2;
         font-family: ${websiteMainFont};
 
         border-radius: 10px;

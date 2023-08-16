@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 import { websiteMainFont } from "../constants";
 
 
-const MenuButtonComponent = ({ height }) => {
+const MenuButtonComponent = ({ height , index }) => {
 
   const [buttonText, setButtonText] = useState('Menu');
 
@@ -35,7 +35,7 @@ const MenuButtonComponent = ({ height }) => {
       height: ${height};
       font-size: 75%;
       font-family: ${websiteMainFont};
-      grid-column: 3/span 2;
+      grid-column: ${index}/span 2;
 
       border-radius: 10px;
       background-color: transparent ;

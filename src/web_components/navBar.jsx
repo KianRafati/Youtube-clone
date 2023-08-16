@@ -39,12 +39,12 @@ const NavBarComponent = ({ height }) => {
     return (
         <NavBar>
             <NavBarImg src="./favicon.ico" />
-            <MenuButtonComponent height={height} />
-            <SearchBarComponent height={height} />
-            <CineProComponent height={height} />
-            <WatchListComponent height={height} />
-            <SignInComponent height={height} />
-            <HorizontalSlider height={height} />
+            <MenuButtonComponent height={height} index={3}/>
+            <SearchBarComponent height={height} index={5} />
+            <CineProComponent height={height} index={10}/>
+            <WatchListComponent height={height} index={12}/>
+            <SignInComponent height={height} index={14}/>
+            <HorizontalSlider height={height} index={16}/>
         </NavBar>
     )
 }

@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { websiteMainFont } from "../constants";
 
 
-const HorizontalSlider = ({ min, max, value, onChange, height }) => {
+const HorizontalSlider = ({ min, max, value, onChange, height ,index }) => {
 
     const SliderContainer = styled.div`
     width: 40%;
     height: ${height};
     font-size: 70%;
-    grid-column: 16/span 2;
+    grid-column: ${index}/span 2;
     font-family: ${websiteMainFont};
 
     border-radius: 10px;
