@@ -7,7 +7,7 @@ const SearchBarComponent = ({height ,index}) => {
 
     const SearchBarStyle = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, 5vw)',
+        gridTemplateColumns: 'repeat(auto-fill, auto)',
         gap: '0',
         gridAutoRows: height,
     }
