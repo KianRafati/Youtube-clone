@@ -1,19 +1,18 @@
 import React from "react";
-import { ReactComponent as SearchIcon } from './assets/search.svg';
+import { styled } from "styled-components";
+import { ReactComponent as SearchIcon } from '../assets/search.svg';
 
-const SearchBarComponent = () => {
+const SearchBarComponent = ({height}) => {
     let placeHoldertxt = 'Search'
 
     const SearchBarStyle = {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, 5vw)',
         gap: '0',
-        gridAutoRows: '5vh',
+        gridAutoRows: height,
     }
  
     const inputStyle = {
-        display: 'grid',
-        gridAutoRows: '5vh',
         gridColumn: '1/span 5',
         borderTopLeftRadius: '10px',
         borderBottomLeftRadius: '10px',
@@ -31,14 +30,18 @@ const SearchBarComponent = () => {
         width: '100%',
         height: '100%',
     }
+    
+    const SearchBarDiv = styled.div`
+        grid-column: 5 / span 5;
+    `
 
     return (
-        <div id="searchBar"  style={SearchBarStyle}>
+        <SearchBarDiv id="searchBar"  style={SearchBarStyle}>
             <input typeof="text" placeholder={placeHoldertxt} style={inputStyle}></input>
             <button style={btnStyle}>
                 <SearchIcon style={iconStyle} />
             </button>
-        </div>
+        </SearchBarDiv>
     )
 }
 

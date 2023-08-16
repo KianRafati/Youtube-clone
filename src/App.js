@@ -1,7 +1,8 @@
 import React from "react";
 import { ReactDOM } from "react";
 import { useEffect } from "react";
-import NavBarComponent from "./navBar.jsx";
+import NavBarComponent from "./web_components/navBar";
+import { NavBarHeight } from "./constants";
 
 import './App.css';
 
@@ -22,7 +23,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <NavBarComponent />
+            <NavBarComponent height={NavBarHeight} />
         </div>
     )
 }
