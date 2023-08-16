@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { websiteMainFont } from "../constants";
 
-const SignInComponent = ({height}) => {
+const SignInComponent = ({height , index}) => {
 
     const SignInButton = styled.button`
         width: 100%;
         height: ${height};
         font-size: 70%;
-        grid-column: 14/span 2;
+        grid-column: ${index}/span 2;
         font-family: ${websiteMainFont};
 
         border-radius: 10px;

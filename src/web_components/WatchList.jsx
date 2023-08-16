@@ -3,7 +3,7 @@ import { ReactComponent as Watchlist } from '../assets/watchlist.svg'
 import { styled } from "styled-components";
 import { websiteMainFont } from "../constants";
 
-const WatchListComponent = ({ height }) => {
+const WatchListComponent = ({ height ,index }) => {
 
     const [buttonText, setButtonText] = useState('Watchlist');
 
@@ -40,7 +40,7 @@ const WatchListComponent = ({ height }) => {
     const WatchlistBtn = styled.button`
         height: ${height};
         font-size: 70%;
-        grid-column: 12/span 2;
+        grid-column: ${index}/span 2;
         font-family: ${websiteMainFont};
 
         display: grid;

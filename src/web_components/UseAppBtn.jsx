@@ -2,23 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { websiteMainFont } from "../constants";
 
-const CineProComponent = ({height ,index}) => {
+const UseAppComponent = ({height , index}) => {
 
-    const CineProStyle = {
-        color: 'aqua',
-        fontWeight: 'bold',
-    }
-
-    const CineProButton = styled.button`
+    const UseAppBtn = styled.button`
         width: 100%;
         height: ${height};
-        font-size: 70%;
+        font-size: large;
         grid-column: ${index}/span 2;
         font-family: ${websiteMainFont};
 
         border-radius: 10px;
-        background-color: transparent ;
-        color: aliceblue;
+        background-color: aqua ;
+        color: dark;
         border: transparent;
 
         &:hover {
@@ -29,10 +24,10 @@ const CineProComponent = ({height ,index}) => {
     `
 
     return (
-        <CineProButton id="CineProBtn">
-            Cine<span style={CineProStyle}>PRO</span>
-        </CineProButton>
+        <UseAppBtn id="CineProBtn">
+            Use App
+        </UseAppBtn>
     )
 }
 
-export default CineProComponent
+export default UseAppComponent

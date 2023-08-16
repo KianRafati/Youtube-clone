@@ -1,2 +1,2 @@
-export const NavBarHeight = '5vh'
+export const NavBarHeight = '30px'
 export const websiteMainFont = 'Oswald'

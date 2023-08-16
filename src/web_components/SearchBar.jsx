@@ -2,12 +2,12 @@ import React from "react";
 import { styled } from "styled-components";
 import { ReactComponent as SearchIcon } from '../assets/search.svg';
 
-const SearchBarComponent = ({height}) => {
+const SearchBarComponent = ({height ,index}) => {
     let placeHoldertxt = 'Search'
 
     const SearchBarStyle = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, 5vw)',
+        gridTemplateColumns: 'repeat(auto-fill, auto)',
         gap: '0',
         gridAutoRows: height,
     }
@@ -32,7 +32,7 @@ const SearchBarComponent = ({height}) => {
     }
     
     const SearchBarDiv = styled.div`
-        grid-column: 5 / span 5;
+        grid-column: ${index} / span 5;
     `
 
     return (
