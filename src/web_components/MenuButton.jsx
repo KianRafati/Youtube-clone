@@ -35,7 +35,7 @@ const MenuButtonComponent = ({ height }) => {
       height: ${height};
       font-size: 75%;
       font-family: ${websiteMainFont};
-      grid-column: 3/span 3;
+      grid-column: 3/span 2;
 
       border-radius: 10px;
       background-color: transparent ;

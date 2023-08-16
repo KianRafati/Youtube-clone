@@ -1,44 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Watchlist } from '../assets/watchlist.svg'
 import { styled } from "styled-components";
 import { websiteMainFont } from "../constants";
 
-const WatchListComponent = () => {
+const WatchListComponent = ({ height }) => {
 
-    const WatchlistStyle = {
-        paddingLeft: '25%',
-        width: '100%',
-        display: 'grid',
-        gridTemplateColumns: '2vw 5vw',
-        gridAutoRows: '5vh',
-    }
+    const [buttonText, setButtonText] = useState('Watchlist');
+
+    useEffect(() => {
+      function updateButtonText() {
+        if (window.innerWidth <= 800) {
+          setButtonText('');
+        } else {
+          setButtonText('Watchlist');
+        }
+      }
+  
+      updateButtonText();
+  
+      window.addEventListener('resize', updateButtonText);
+      return () => {
+        window.removeEventListener('resize', updateButtonText);
+      };
+    }, []);
 
     const WatchlistIconStyle = {
-        padding: '10%',
         width: '100%',
         height: '100%',
         gridColumn: '1',
-        gridColumn: '10px',
     }
 
     const WatchlistLblStyle = {
-        padding: '10%',
         width: '100%',
         height: '100%',
+        padding: '0',
         gridColumn: '2',
     }
 
     const WatchlistBtn = styled.button`
-        width: 100%;
+        height: ${height};
         font-size: 70%;
-        grid-column: 13/span 2;
+        grid-column: 12/span 2;
         font-family: ${websiteMainFont};
+
+        display: grid;
+        grid-template-columns: auto auto;
 
         border-radius: 10px;
         background-color: transparent ;
         color: aliceblue;
         border: transparent;
-
+        
         &:hover {
             background-color: #4f4f4f;
             color: white;
@@ -47,10 +59,10 @@ const WatchListComponent = () => {
     `
 
     return (
-        <WatchlistBtn id="WatchlistBtn" style={WatchlistStyle}>
+        <WatchlistBtn id="WatchlistBtn">
             <Watchlist style={WatchlistIconStyle} />
             <label style={WatchlistLblStyle}>
-                Watchlist
+                {buttonText}
             </label>
         </WatchlistBtn>
     )

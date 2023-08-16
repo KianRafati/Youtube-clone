@@ -4,6 +4,8 @@ import MenuButtonComponent from './MenuButton.jsx';
 import SearchBarComponent from "./SearchBar.jsx";
 import CineProComponent from './CinePro.jsx'
 import WatchListComponent from './WatchList.jsx'
+import SignInComponent from "./SignInBtn.jsx";
+import HorizontalSlider from "./ThemeChanger.jsx";
 
 import { NavBarHeight } from "../constants.js";
 
@@ -17,9 +19,9 @@ const NavBar = styled.nav`
     z-index: 100;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 5vw);
+    grid-template-columns: repeat(auto-fill, auto);
     grid-auto-rows: ${NavBarHeight};
-    gap: 2vw;
+    gap: 10px;
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(10px);
     border-bottom: #baba solid 0.5px;
@@ -40,7 +42,9 @@ const NavBarComponent = ({ height }) => {
             <MenuButtonComponent height={height} />
             <SearchBarComponent height={height} />
             <CineProComponent height={height} />
-            <WatchListComponent />
+            <WatchListComponent height={height} />
+            <SignInComponent height={height} />
+            <HorizontalSlider height={height} />
         </NavBar>
     )
 }
