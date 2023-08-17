@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import NavBarComponent from "./web_components/navBar";
 import AdvertisementComponent from "./web_components/Advertisement";
 import { NavBarHeight } from "./constants";
-
 import './App.css';
 
 const API_URL = 'http://www.omdbapi.com?apikey=7e3ed608'
