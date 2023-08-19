@@ -3,6 +3,7 @@ import { ReactDOM } from "react";
 import { useEffect } from "react";
 import NavBarComponent from "./web_components/navBar";
 import AdvertisementComponent from "./web_components/Advertisement";
+import UpnextComponent from "./web_components/UpNext";
 import { NavBarHeight } from "./constants";
 import './App.css';
 
@@ -25,6 +26,7 @@ const App = () => {
         <div className="app">
             <NavBarComponent height={NavBarHeight} />
             <AdvertisementComponent />
+            <UpnextComponent />
         </div>
     )
 }
